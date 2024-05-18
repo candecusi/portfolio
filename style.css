@@ -9,7 +9,6 @@ html{
     
 }
 
-
 header{
     height: 100px;
     background-color: #D1AAA3;
@@ -18,13 +17,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .logo{
     text-transform: uppercase;
     color: #FDFDFD;
-    margin-right: 50%;
+    margin-right: 40%;
     cursor:default;
 }
 
@@ -39,11 +37,10 @@ header{
     margin-right: 10px;
     position: relative;
     display: inline-block;
-    
 }
 
 .menu a:after{
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
     content: '';
     position: absolute;
     width: 100%;
@@ -225,7 +222,7 @@ a.btn-white:hover{
   }
 
 #cards{
-    padding: 2% 8%;
+    padding: 2% 4%;
 }
 
 #cards a{
@@ -267,10 +264,10 @@ a.btn-white:hover{
 }
 
 #cards h2{
-    margin: 16px 2px;
+    margin: 16px 20px;
     color: #D1AAA3;
     text-transform: uppercase;
-    width: 120%;
+    width: 15%;
 }
 
 a.btn-preview{
@@ -311,6 +308,21 @@ a.btn-preview:hover{
 #check{
     display: none;
 }
+
+footer{
+    padding: 25px;
+    background-color: #D1AAA3;
+    width: 100%;
+}
+
+footer li, a{
+    list-style: none;
+    text-decoration: none;
+    color: #FDFDFD;
+}
+
+
+
 
 /*RESPONSIVE*/
 
@@ -486,5 +498,15 @@ a.btn-preview:hover{
         color: #dcbcb6;
     }
     
+    footer{
+        padding: 12%;
+        background-color: #D1AAA3;
+        width: 100%;
+    }
     
+    footer li, a{
+        list-style: none;
+        text-decoration: none;
+        color: #FDFDFD;
+    }
 }
