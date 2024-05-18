@@ -309,6 +309,7 @@ a.btn-preview:hover{
     display: none;
 }
 
+<<<<<<< HEAD
 footer{
     padding: 25px;
     background-color: #D1AAA3;
@@ -321,6 +322,8 @@ footer li, a{
     color: #FDFDFD;
 }
 
+=======
+>>>>>>> 119f1fdbd132dd69d673ab6a3d3f7f95b17ec12d
 
 
 
@@ -497,6 +500,7 @@ footer li, a{
         padding: 12px;
         color: #dcbcb6;
     }
+<<<<<<< HEAD
     
     footer{
         padding: 12%;
@@ -510,3 +514,6 @@ footer li, a{
         color: #FDFDFD;
     }
 }
+=======
+}
+>>>>>>> 119f1fdbd132dd69d673ab6a3d3f7f95b17ec12d
