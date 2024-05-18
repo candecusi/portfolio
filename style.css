@@ -309,18 +309,6 @@ a.btn-preview:hover{
     display: none;
 }
 
-footer{
-    padding: 25px;
-    background-color: #D1AAA3;
-    width: 100%;
-}
-
-footer li, a{
-    list-style: none;
-    text-decoration: none;
-    color: #FDFDFD;
-}
-
 
 
 
@@ -496,17 +484,5 @@ footer li, a{
         border: 2px solid #dcbcb6;
         padding: 12px;
         color: #dcbcb6;
-    }
-    
-    footer{
-        padding: 12%;
-        background-color: #D1AAA3;
-        width: 100%;
-    }
-    
-    footer li, a{
-        list-style: none;
-        text-decoration: none;
-        color: #FDFDFD;
     }
 }
