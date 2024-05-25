@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Portfolio - Candela Cusinier</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="check">
+        <label for="check" class="show-menu">
+            &#8801
+        </label>
+        <a href="#main"><img src="img/logo.png" alt="logo"></a>
+            <ul class="menu">
+                <li><a href="#main">Inicio</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <label style="float: right;" for="check" class="hide-menu">
+                    &#215
+                </label>
+            </ul>
+            <div>
+                <a href="" class="pink-btn">Desargar CV</a>
+                <a href="" class="outline-btn-icon">EN</a>
+            </div>
+    </header>
+
+
+    <main>
+        <div>
+            <div class="main-content">
+                <h2>Candela Cusinier</h2>
+                <h3>Desarrollo Web & Diseño UI/UX</h3>
+            </div>
+    
+            <div class="main-btn">
+                <a href="" class="white-btn">Descargar</a>
+                <a href="#projects" class="white-btn">↓</a>
+            </div>
+        </div>
+        
+
+        <div class="social">
+            <a href=""><i class='bx bxl-linkedin'></i></a>
+            <a href=""><i class='bx bxl-github' ></i></a>
+            <a href=""><i class='bx bxl-behance' ></i></a>
+            <a href=""><i class='bx bxs-envelope' ></i></a>
+        </div>
+    </main>
+
+
+    <section id="projects">
+        <div class="container-cards">
+            <div class="card">
+                <img src="img/project-1.png" alt="">
+                <h3>Landing Page - Responsive</h3>
+                <div class="card-btn">
+                    <a href="" class="pink-btn"><i class='bx bxl-github github'></i>Github</a>
+                    <a href="" class="outline-btn"><i class='bx bx-show'></i>Demo</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/project-2.png" alt="">
+                <h3>Tu FinanzApp</h3>
+                <div class="card-btn">
+                    <a href="" class="pink-btn"><i class='bx bxl-github github'></i>Github</a>
+                    <a href="" class="outline-btn"><i class='bx bx-show'></i>Demo</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/project-3.png" alt="">
+                <h3>GOLDEN - JK</h3>
+                <div class="card-btn">
+                    <a href="" class="pink-btn"><i class='bx bxl-github github'></i>Github</a>
+                    <a href="" class="outline-btn"><i class='bx bx-show'></i>Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container-about-skills">
+            <div class="container-about">
+                <div class="img-name">
+                    <img src="img/Candela Cusinier.png" alt="">
+                    <h2 class="name">Candela Cusinier</h2>
+                </div> 
+            <h3>Soy una persona creativa y apasionada que se siente motivada por el 
+                aprendizaje constante y la exploración de nuevas ideas en el ámbito de la tecnología.
+            </h3>
+            </div>
+            
+            <div class="container-skills">
+                <h2 class="skills-title">Habilidades</h2>
+                <ul class="skills-items">
+                    <li>Desarrollo Web (Front-end)</li>
+                    <li>Diseño UI/UX</li>
+                    <li>Figma & Adobe XD</li>
+                    <li>Diseño Digital & Visual</li>
+                    <li>Presentaciones de PowerPoint</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact">
+        <div>
+            <a href="" class="white-btn footer-btn">Descargar CV</a>
+        </div>
+    </footer>
+
+    <script>
+        
+        document.getElementById("btn_menu").addEventListener("click" , mostrar_menu);
+
+        document.getElementById("back_menu").addEventListener("click", ocultar_menu)
+
+        nav = document.getElementById("nav");
+        background_menu = document.getElementById("back_menu");
+
+        function mostrar_menu(){
+
+            nav.style.right = "0px";
+            background_menu.style.display = "block";
+        }
+
+        function ocultar_menu(){
+            nav.style.right = "-250px";
+            background_menu.style.display = "none";
+        }
+    
+    </script>
+</body>
+</html>
