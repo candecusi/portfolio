@@ -179,7 +179,9 @@ main{
     border-radius: 8px;
     margin-right: 6px;
     padding-left: 8px;
+    color: #D1AAA3;
 }
+
 
 .bx:hover{
     color: #D1AAA3;
@@ -193,6 +195,7 @@ main{
 .github{
     color: #FDFDFD;
 }
+
 
 .bx-show, .github{
     margin-right: 5px;
