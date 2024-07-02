@@ -98,6 +98,7 @@ header, ul, li, a{
 .pink-btn:hover{
     border: 2px solid #D1AAA3;
     background-color: #FDFDFD;
+    color: #D1AAA3;
     transition: all 250ms ease-out;
 }
 
