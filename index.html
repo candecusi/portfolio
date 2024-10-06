@@ -4,140 +4,151 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <title>Portfolio - Candela Cusinier</title>
-    <link rel="icon" type="image/x-icon" href="/img/logo.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio - Candecusi</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
     <header>
-        <input type="checkbox" id="check">
-        <label for="check" class="show-menu">
-            &#8801
-        </label>
-        <a href="#main"><img src="img/logo.png" alt="logo"></a>
-            <ul class="menu">
-                <li><a href="#main">Inicio</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#contact">Contacto</a></li>
-                <label style="float: right;" for="check" class="hide-menu">
-                    &#215
-                </label>
-            </ul>
-            <div>
-                <a href="CV - Candela Cusinier.pdf" class="pink-btn" target="_blank">Desargar CV</a>
-                <a href="" class="outline-btn-icon">EN</a>
-            </div>
+   
+            <input type="checkbox" id="check">
+            <label for="check" class="show-menu">
+                &#8801
+            </label>
+            <a href="#main" id="logo-desktop"><img src="img/logo+icon.png" alt="logo"></a>
+            <a href="#main" id="logo-phone"><img src="img/logo.png" alt="logo"></a>
+                <ul class="menu">
+                    <li><a onclick="document.getElementById('check').checked = false;" href="#main">Inicio</a></li>
+                    <li><a onclick="document.getElementById('check').checked = false;" href="#projects">Proyectos</a></li>
+                    <li><a onclick="document.getElementById('check').checked = false;" href="#skills">Skills</a></li>
+                    <li><a onclick="document.getElementById('check').checked = false;" href="#certifications">Certificaciones</a></li>
+                    <a href="#contact" class="btn-primary">Contacto</a>
+                    <label style="color: #fff;float: right;" for="check" class="hide-menu">
+                        &#215
+                    </label>
+                </ul>
+    
     </header>
 
-
-    <main>
-        <div>
-            <div class="main-content">
-                <h2>Candela Cusinier</h2>
-                <h3>Desarrollo Web & Diseño UI/UX</h3>
-            </div>
-    
-            <div class="main-btn">
-                <a href="CV - Candela Cusinier.pdf" class="white-btn" target="_blank">Descargar</a>
-                <a href="#projects" class="white-btn">↓</a>
-            </div>
-        </div>
-        
-
-        <div class="social">
-            <a href="https://www.linkedin.com/in/candela-cusinier/"target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/candecusi/Projects" target="_blank"><i class='bx bxl-github' ></i></a>
-            <a href="https://www.behance.net/candecusinier" target="_blank"><i class='bx bxl-behance' ></i></a>
-            <a href="mailto:cscusinier@gmail.com"target="_blank"><i class='bx bxs-envelope' ></i></a>
-        </div>
+    <main id="main"> 
+        <div class="main-content animate__animated animate__fadeInDown">
+            <span>Candela Cusinier</span>  
+            <h2>Diseño UX/UI<br>& Desarrollo Web (Front-end)</h2>   
+            <a class="btn-primary" href="#contact">Contacto</a>          
+        </div>    
+        <img class="animate__animated animate__zoomIn" src="img/main.jpg" alt="Ilustración">      
     </main>
 
-
     <section id="projects">
-        <div class="container-cards">
-            <div class="card">
-                <img src="img/project-1.png" alt="">
-                <h3>Landing Page - Responsive</h3>
-                <div class="card-btn">
-                    <a href="https://github.com/candecusi/Projects/tree/main/Cande%20Cusinier%20-%20lading%20page%20(Responsive)" class="pink-btn" target="_blank"><i class='bx bxl-github github'></i>Github</a>
-                    <a href="https://ladingpage-responsive.netlify.app/" class="outline-btn" target="_blank"><i class='bx bx-show'></i>Demo</a>
-                </div>
+        <h2 class="title">🔥 Top Proyectos Recientes</h2>
+        <div class="cards-projects">
+
+            <div class="card-pj">
+                <img src="img/finanz.png" alt="FINANZ">
+                <span>Diseño UX/UI</span>
+                <h2><a href="pages/finanz.html">FINANZ ↗</a></h2>
             </div>
 
-            <div class="card">
-                <img src="img/project-2.png" alt="">
-                <h3>Tu FinanzApp</h3>
-                <div class="card-btn">
-                    <a href="https://github.com/candecusi/Projects/tree/main/Tu%20FinanzApp" class="pink-btn" target="_blank"><i class='bx bxl-github github'></i>Github</a>
-                    <a href="https://tu-finanzapp.netlify.app/" class="outline-btn" target="_blank"><i class='bx bx-show'></i>Demo</a>
-                </div>
+            <div class="card-pj">
+                <img src="img/BM COVER.png" alt="BABYMONSTER">
+                <span>Desarrollo Web</span>
+                <h2><a href="pages/babymonster.html">BABYMONSTER ↗</a></h2>
             </div>
 
-            <div class="card">
-                <img src="img/project-3.png" alt="">
-                <h3>GOLDEN - JK</h3>
-                <div class="card-btn">
-                    <a href="https://github.com/candecusi/projects/tree/main/GOLDEN-JK" class="pink-btn" target="_blank"><i class='bx bxl-github github'></i>Github</a>
-                    <a href="https://goldenjk.netlify.app/" class="outline-btn" target="_blank"><i class='bx bx-show'></i>Demo</a>
-                </div>
+            <div class="card-pj">
+                <img src="img/planify.jpg" alt="Planify">
+                <span>Diseño Gráfico</span>
+                <h2><a href="pages/planify.html">Planify ↗</a></h2>
             </div>
+
         </div>
     </section>
 
-    <section id="about">
-        <div class="container-about-skills">
-            <div class="container-about">
-                <div class="img-name">
-                    <img src="img/Candela Cusinier.png" alt="">
-                    <h2 class="name">Candela Cusinier</h2>
-                </div> 
-            <h3>Soy una persona creativa y apasionada que se siente motivada por el 
-                aprendizaje constante y la exploración de nuevas ideas en el ámbito de la tecnología.
-            </h3>
+    <section id="skills">
+
+        <h2 class="title">Habilidades (Diseño UX/UI & Diseño Web)</h2>
+        <div class="skills-cards">
+
+            <div class="card-sk">
+                <img src="svg/html-css-bootstrap-sass.svg" alt="BOOTSTRAP-SVG">
+                <h2><a href="pages/html-css-bt-sass.html">Desarrollo Web ↗</a></h2>
             </div>
-            
-            <div class="container-skills">
-                <h2 class="skills-title">Habilidades</h2>
-                <ul class="skills-items">
-                    <li>Desarrollo Web (Front-end)</li>
-                    <li>Diseño UI/UX</li>
-                    <li>Figma & Adobe XD</li>
-                    <li>Diseño Digital & Visual</li>
-                    <li>Presentaciones de PowerPoint</li>
-                </ul>
+
+            <div class="card-sk">
+                <img src="svg/figma.svg" alt="FIGMA-SVG">
+                <h2><a href="pages/figma.html">FIGMA ↗</a></h2>
             </div>
+
+            <div class="card-sk">
+                <img src="svg/slide.svg" alt="Google-Slides-SVG">
+                <h2><a href="pages/slides.html">Google Slides ↗</a></h2>
+            </div>
+
+            <div class="card-sk">
+                <img src="svg/adobe-illustrator.svg" alt="Adobe-Illustrator-SVG">
+                <h2><a href="pages/adobe-illustrator.html">Adobe Illustrator ↗</a></h2>
+            </div>
+
         </div>
+        
     </section>
 
+    <section id="certifications">
+
+        <h2 class="title">🔥 Top Certificaciones</h2>
+        <div class="cards-certifications">
+
+            <div class="card-cf">
+                <img src="img/coderhouse.jpg" alt="coderhouse">
+                <span>CODERHOUSE - Cursando</span>
+                <h2><a href="pages/mkt-digital.html">Marketing Digital ↗</a></h2>
+            </div>
+
+            <div class="card-cf">
+                <img src="img/coderhouse.jpg" alt="coderhouse">
+                <span>CODERHOUSE - Cursando</span>
+                <h2><a href="pages/desarrollo-ux-ui.html">Carerra Desarrollo UX/UI ↗</a></h2>
+            </div>
+
+            <div class="card-cf">
+                <img src="img/certificado-dsw.png" alt="certificado-dsw">
+                <span>CODERHOUSE</span>
+                 <h2><a href="pages/desarrollo-web.html">Desarrollo Web ↗</a></h2> 
+            </div>
+
+        </div>
+
+    </section>
 
     <footer id="contact">
-        <div>
-            <a href="CV - Candela Cusinier.pdf"  class="white-btn footer-btn" target="_blank">Descargar CV</a>
+
+        <div class="card-footer">
+
+            <div class="contact">
+                <div class="text-contact">
+                    <img src="img/Candela Cusinier pic.png" alt="candecusi-foto">
+                    <h2 class="title">Contacto</h2>
+                </div>   
+                <a class="btn-primary-desktop" href="CV - Candela Cusinier.pdf" target="_blank">Descargar CV</a>
+            </div>
+
+            <div class="rrss">
+                    <a href="mailto:cscusinier@gmail.com" target="_blank"><i class='bx bx-envelope'></i>Email</a>
+                    <a href="" target="_blank"><i class='bx bxl-linkedin-square' ></i>Linkedin</a>
+                    <a href="https://github.com/candecusi" target="_blank"><i class='bx bxl-github' ></i>Github</a>
+                    <a href="https://www.behance.net/candecusinier" target="_blank"><i class='bx bxl-behance' ></i>Behance</a>         
+            </div>
+
+            <a class="btn-primary-phone" href="CV - Candela Cusinier.pdf" target="_blank">Descargar CV</a>
+
         </div>
+
     </footer>
 
-    <script>
-        
-        document.getElementById("btn_menu").addEventListener("click" , mostrar_menu);
-
-        document.getElementById("back_menu").addEventListener("click", ocultar_menu)
-
-        nav = document.getElementById("nav");
-        background_menu = document.getElementById("back_menu");
-
-        function mostrar_menu(){
-
-            nav.style.right = "0px";
-            background_menu.style.display = "block";
-        }
-
-        function ocultar_menu(){
-            nav.style.right = "-250px";
-            background_menu.style.display = "none";
-        }
-    
-    </script>
 </body>
 </html>

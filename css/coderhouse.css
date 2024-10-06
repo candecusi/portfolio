@@ -50,17 +50,12 @@ html{
         display: none;
     }
 
-    
-
-
 
     header{
         background-color: #F2F2FD;
         padding: 4vh;
-        width: 100vw;
         display: flex;  
         justify-content: space-between;
-        position: fixed;
     }
 
 
@@ -103,6 +98,7 @@ html{
         text-decoration: none;
         text-align: center;
     }
+    
 
 
 /*RESPONSIVE HEADER*/
@@ -165,90 +161,195 @@ html{
     }
 
 
-
     /*MAIN*/
 
     main{
-        background-color: var(--bg);
-        padding-top: 16%;
-        padding-bottom: 5%;
-        display: grid; 
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;    
-        justify-content: center;
-        align-items: center;
+        padding: 2% 4%;
     }
 
-    main img{
-        width: 80vh;
+    .container-flex{
+        background-color: #DDDDFF;
+        padding: 2%;
+        border-radius: 15px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr; 
+        align-items: center;
+        margin-bottom: 20px;
+        width: 90vw;
+    }
+
+    .container-flex img{
+        width: 515px;
         border-radius: 10px;
     }
 
-    .main-content{
-        margin-left: 10vw;
+    .content h2{
+        margin-bottom: 10px;
     }
 
-    .main-content h2{
-        margin-bottom: 4vh;
+    span{
+        color: #4269EC;
+        font-weight: 600;
     }
-
-
-    /*TEXT*/
 
     .title{
-        margin-bottom: 5vh;
+        margin: 5vh 0vw;
+    }
+    
+    h3{
+        font-size: 1.2rem;
+        font-weight: 400;
     }
 
-    h2{
-        font-weight: 500;
-        font-size: 2rem;
+    
+
+    /*CODERHOUSE*/
+
+    .container-coderhouse{
+        padding: 10px;
+        border-radius: 15px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr; 
+        align-items: center;
+        margin-bottom: 20px;
+        width: 90vw;
     }
 
-    h2 a{
+    .container-coderhouse{
+        display: flex;
+    }
+
+    .container-coderhouse img{
+        width: 120px;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+
+    .content-coderhouse h2{
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .container-coderhouse h3{
+        font-size: 1rem;
+    }
+
+    
+
+
+/*RESPONSIVE MAIN*/
+
+@media screen and (max-width:480px) {
+    .container-flex{
+        background-color: #DDDDFF;
+        padding: 4%;
+        height: 110vh;
+        display: grid; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .container-flex img{
+        width: 82vw;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .btn-primary{
+        display: none;
+    }
+
+    .container-coderhouse img{
+        width: 100px;
+    }
+
+    .container-coderhouse h3{
+        font-size: 0.8rem;
+    }
+
+}
+
+
+    /*ABOUT*/
+
+    .about{
+        padding: 20px;
+    }
+
+    .about h3{
+        margin-top: 20px;
+    }
+
+
+    /*MORE ABOUT*/
+
+    #more-about{
+        background-color: var(--bg);
+        padding: 5%;
+    }
+
+    .cards-more{
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        gap:25px;
+        margin-top: 20px;
+    }
+
+    .card-m{
+        background-color: var(--cards);
+        align-items: center;
+        padding: 10vh 5vw;
+        border-radius: 20px;
+    }
+
+    .card-m h3{
+        color: #8e8ea7;
+    }
+
+    a{
         color: black;
         font-weight: 400;
     }
 
-    span{
-        font-size: 1.8rem;
+
+
+    /*RESPONSIVE MORE ABOUT*/
+    @media screen and (max-width:480px) {
+
+        #more-about{
+            padding: 8%;
+        }
+    
+        .cards-more{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    
+        .card-m{
+            background-color: var(--cards);
+            align-items: center;
+            padding: 10vh 12vw;
+            border-radius: 20px;
+        }
+
+        a{
+            font-size: 1.2rem;
+        }
+
+        
     }
-
-    .btn-primary-phone{
-        display: none;
-    }
-
-
-
-/*MAIN RESPONSIVE*/
-
-@media screen and (max-width:480px) {
-
-main{
-    padding: 30% 8% 8% 8%;
-    display: grid; 
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;    
-    justify-content: center;
-}
-
-.main-content{
-    margin-left: 0vw;
-}
-
-.main-content h2{
-    font-size: 1rem;
-    margin-bottom: 8vh;
-}
-
-}
-
-
-
 
     /*PROJECTS*/
 
     #projects{
         padding: 5%;
+        background-color: #F2F2FD;
     }
 
     .cards-projects{
@@ -262,7 +363,7 @@ main{
     .card-pj img{
         width: 24vw;
         border-radius: 15px;
-        border: 6px solid #F2F2FD;
+        border: 6px solid #ffffff;
         margin-bottom: 2vh;
     }
 
@@ -304,21 +405,23 @@ main{
 
 
 
-    /*SKILLS*/
 
-    #skills{
+    /*TOOLS*/
+
+    #tools{
         background-color: var(--bg);
         padding: 5%;
     }
 
-    .skills-cards{
+    .tools-cards{
         display: grid;
         grid-template-columns: 0.5fr 0.5fr;
         grid-template-rows: 1fr 1fr;
         gap:25px;
+        margin-top: 20px;
     }
 
-    .card-sk{
+    .card-t{
         background-color: var(--cards);
         display: flex;
         align-items: center;
@@ -326,89 +429,99 @@ main{
         border-radius: 20px;
     }
 
-    .card-sk img{
+    .card-t img{
         width: 7vw;
         margin-right: 15px;
     }
   
 
-    /*RESPONSIVE SKILLS*/
+    /*RESPONSIVE TOOLS*/
     @media screen and (max-width:480px) {
 
-    #skills{
+    #tools{
         padding: 8%;
     }
 
-    .skills-cards{
+    .tools-cards{
         display: grid;
-        grid-template-columns: 0.5fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
-    .card-sk{
+    .card-t{
         background-color: var(--cards);
         align-items: center;
         padding: 10vh 12vw;
         border-radius: 20px;
     }
 
-    .card-sk img{
+    .card-t img{
+        width: 10vw;
+        margin-right: 15px;
+    }
+  
+    }
+
+
+
+    /*TOOLS RELATIONATED*/
+
+    #tools-rel{
+        padding: 5%;
+    }
+
+    .tools-cards-rel{
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        gap:25px;
+        margin-top: 20px;
+    }
+
+    .card-tr{
+        background-color: var(--bg);
+        display: flex;
+        align-items: center;
+        padding: 6.5vh 3.5vw;
+        border-radius: 20px;
+    }
+
+    .card-tr img{
+        width: 5vw;
+        margin-right: 15px;
+    }
+  
+
+    /*RESPONSIVE RELATIONATED*/
+    @media screen and (max-width:480px) {
+
+    #tools-rel{
+        padding: 8%;
+    }
+
+    .tools-cards-rel{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .card-tr{
+        align-items: center;
+        padding: 10vh 12vw;
+        border-radius: 20px;
+    }
+
+    .card-tr img{
         width: 10vw;
     }
   
     }
-    
 
 
 
-    /*Certifications*/
+     /*FOOTER CONTACT*/
 
-    #certifications{
-        padding: 5%;
-    }
-
-    .cards-certifications{
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap:25px;
-    }
-
-    .card-cf img{
-        width: 24vw;
-        border-radius: 15px;
-        border: 6px solid #F2F2FD;
-        margin-bottom: 2vh;
-    }
-
-
-/*RESPONSIVE CERTIFICACIONES*/
-@media screen and (max-width:480px) {
-
-    #certifications{
-        padding: 8%;
-        justify-content: center;
-    }
-
-    .cards-certifications{
-        display: grid; 
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap:35px;    
-    }
-
-
-    .card-cf img{
-        width: 80vw;
-        margin-bottom: 4vh;
-    }
-  
-    }
-
-
-    /*FOOTER CONTACT*/
-
-    #contact{
+     #contact{
         padding: 5%;
         background-color: var(--bg);
     }
@@ -427,7 +540,10 @@ main{
 
     .text-contact{
         display: flex;
-        align-items: center;
+    }
+    
+    .text-contact h3{
+        margin-top: 20px;
     }
 
     .contact img{
@@ -436,7 +552,7 @@ main{
         border-radius: 5px;
     }
 
-    .contact h2{
+    .contact h3{
         margin-left: 15px;
     }
 

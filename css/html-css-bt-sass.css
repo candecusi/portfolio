@@ -50,17 +50,12 @@ html{
         display: none;
     }
 
-    
-
-
 
     header{
         background-color: #F2F2FD;
         padding: 4vh;
-        width: 100vw;
         display: flex;  
         justify-content: space-between;
-        position: fixed;
     }
 
 
@@ -103,6 +98,7 @@ html{
         text-decoration: none;
         text-align: center;
     }
+    
 
 
 /*RESPONSIVE HEADER*/
@@ -165,102 +161,91 @@ html{
     }
 
 
-
     /*MAIN*/
 
     main{
-        background-color: var(--bg);
-        padding-top: 16%;
-        padding-bottom: 5%;
-        display: grid; 
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;    
-        justify-content: center;
+        padding: 2% 4% 0%;
+    }
+
+    .container-flex{
+        background-color: #DDDDFF;
+        padding: 2%;
+        border-radius: 15px;
+        display: inline-flex;   
         align-items: center;
+        margin-bottom: 20px;
+        width: 90vw;
     }
 
-    main img{
-        width: 80vh;
+    .container-flex img{
+        width: 80px;
         border-radius: 10px;
+        margin-right: 2%;
     }
 
-    .main-content{
-        margin-left: 10vw;
-    }
-
-    .main-content h2{
-        margin-bottom: 4vh;
-    }
-
-
-    /*TEXT*/
-
-    .title{
-        margin-bottom: 5vh;
-    }
-
-    h2{
-        font-weight: 500;
-        font-size: 2rem;
-    }
-
-    h2 a{
-        color: black;
-        font-weight: 400;
+    .content h2{
+        margin-bottom: 10px;
     }
 
     span{
-        font-size: 1.8rem;
+        color: #4269EC;
+        font-weight: 600;
     }
 
-    .btn-primary-phone{
+    .title{
+        margin: 0px 0px 20px;
+    }
+    
+    h3{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    
+    
+
+
+/*RESPONSIVE MAIN*/
+
+@media screen and (max-width:480px) {
+    .container-flex{
+        background-color: #DDDDFF;
+        padding: 4%;
+        height: 70vh;
+        display: inline-block; 
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .container-flex img{
+        width: 20vw;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .btn-primary{
         display: none;
     }
 
-
-
-/*MAIN RESPONSIVE*/
-
-@media screen and (max-width:480px) {
-
-main{
-    padding: 30% 8% 8% 8%;
-    display: grid; 
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;    
-    justify-content: center;
 }
-
-.main-content{
-    margin-left: 0vw;
-}
-
-.main-content h2{
-    font-size: 1rem;
-    margin-bottom: 8vh;
-}
-
-}
-
-
 
 
     /*PROJECTS*/
 
     #projects{
-        padding: 5%;
+        padding: 0% 5%;
     }
 
     .cards-projects{
         display: grid; 
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         gap:25px;    
     }
 
 
     .card-pj img{
-        width: 24vw;
+        width: 40vw;
         border-radius: 15px;
         border: 6px solid #F2F2FD;
         margin-bottom: 2vh;
@@ -299,116 +284,194 @@ main{
         width: 80vw;
         margin-bottom: 4vh;
     }
+
+    /*TEXT*/
+
+    .title{
+        margin: 18px 0px;
+    }
 }
 
 
 
+    /*MORE ABOUT*/
 
-    /*SKILLS*/
-
-    #skills{
+    #more-about{
         background-color: var(--bg);
         padding: 5%;
     }
 
-    .skills-cards{
+    .cards-more{
         display: grid;
         grid-template-columns: 0.5fr 0.5fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
         gap:25px;
+        margin-top: 20px;
     }
 
-    .card-sk{
+    .card-m{
         background-color: var(--cards);
-        display: flex;
         align-items: center;
         padding: 10vh 5vw;
         border-radius: 20px;
     }
 
-    .card-sk img{
+    .card-m h3{
+        color: #8e8ea7;
+    }
+
+    a{
+        color: black;
+        font-weight: 400;
+    }
+
+
+
+    /*RESPONSIVE MORE ABOUT*/
+    @media screen and (max-width:480px) {
+
+        #more-about{
+            padding: 8%;
+        }
+    
+        .cards-more{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    
+        .card-m{
+            background-color: var(--cards);
+            align-items: center;
+            padding: 10vh 12vw;
+            border-radius: 20px;
+        }
+
+        a{
+            font-size: 1.2rem;
+        }
+
+        
+    }
+
+
+    /*TOOLS*/
+
+    #tools{
+        background-color: var(--border-card);
+        padding: 5%;
+        margin-top: 5%;
+    }
+
+    .tools-cards{
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        gap:25px;
+        margin-top: 20px;
+    }
+
+    .card-t{
+        background-color: var(--bg);
+        display: flex;
+        align-items: center;
+        padding: 5vh;
+        border-radius: 20px;
+    }
+
+    .card-t img{
         width: 7vw;
         margin-right: 15px;
     }
   
 
-    /*RESPONSIVE SKILLS*/
+    /*RESPONSIVE TOOLS*/
     @media screen and (max-width:480px) {
 
-    #skills{
+    #tools{
         padding: 8%;
     }
 
-    .skills-cards{
+    .tools-cards{
         display: grid;
-        grid-template-columns: 0.5fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
-    .card-sk{
+    .card-t{
         background-color: var(--cards);
         align-items: center;
         padding: 10vh 12vw;
         border-radius: 20px;
     }
 
-    .card-sk img{
+    .card-t img{
+        width: 10vw;
+        margin-right: 15px;
+    }
+  
+    }
+
+
+
+    /*TOOLS RELATIONATED*/
+
+    #tools-rel{
+        padding: 5%;
+    }
+
+    .tools-cards-rel{
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        gap:25px;
+        margin-top: 20px;
+    }
+
+    .card-tr{
+        background-color: var(--bg);
+        display: flex;
+        align-items: center;
+        padding: 4vh 3vw;
+        border-radius: 20px;
+    }
+
+    .card-tr img{
+        width: 5vw;
+        margin-right: 15px;
+    }
+  
+
+    /*RESPONSIVE RELATIONATED*/
+    @media screen and (max-width:480px) {
+
+    #tools-rel{
+        padding: 8%;
+    }
+
+    .tools-cards-rel{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .card-tr{
+        align-items: center;
+        padding: 10vh 12vw;
+        border-radius: 20px;
+    }
+
+    .card-tr img{
         width: 10vw;
     }
   
     }
-    
 
 
 
-    /*Certifications*/
+     /*FOOTER CONTACT*/
 
-    #certifications{
-        padding: 5%;
-    }
-
-    .cards-certifications{
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap:25px;
-    }
-
-    .card-cf img{
-        width: 24vw;
-        border-radius: 15px;
-        border: 6px solid #F2F2FD;
-        margin-bottom: 2vh;
-    }
-
-
-/*RESPONSIVE CERTIFICACIONES*/
-@media screen and (max-width:480px) {
-
-    #certifications{
-        padding: 8%;
-        justify-content: center;
-    }
-
-    .cards-certifications{
-        display: grid; 
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap:35px;    
-    }
-
-
-    .card-cf img{
-        width: 80vw;
-        margin-bottom: 4vh;
-    }
-  
-    }
-
-
-    /*FOOTER CONTACT*/
-
-    #contact{
+     #contact{
         padding: 5%;
         background-color: var(--bg);
     }
@@ -427,7 +490,10 @@ main{
 
     .text-contact{
         display: flex;
-        align-items: center;
+    }
+    
+    .text-contact h3{
+        margin-top: 20px;
     }
 
     .contact img{
@@ -436,7 +502,7 @@ main{
         border-radius: 5px;
     }
 
-    .contact h2{
+    .contact h3{
         margin-left: 15px;
     }
 
@@ -522,3 +588,19 @@ main{
 }
 
 
+/*BABYMONSTER*/
+
+
+/*about bm*/
+
+.about-bm{
+    padding: 20px;
+}
+
+.about-bm h3{
+    margin-top: 20px;
+}
+
+.about-bm span{
+    color: #B61A22;
+}
