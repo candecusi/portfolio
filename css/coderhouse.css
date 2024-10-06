@@ -245,7 +245,7 @@ html{
     .container-flex{
         background-color: #DDDDFF;
         padding: 4%;
-        height: 110vh;
+        height: 20vh;
         display: grid; 
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr; 
@@ -262,6 +262,7 @@ html{
     .btn-primary{
         display: none;
     }
+    
 
     .container-coderhouse img{
         width: 100px;
@@ -269,6 +270,10 @@ html{
 
     .container-coderhouse h3{
         font-size: 0.8rem;
+    }
+
+    .about ul li a{
+        font-size: 1rem;
     }
 
 }
@@ -502,7 +507,7 @@ html{
     .tools-cards-rel{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 
     .card-tr{
@@ -547,13 +552,14 @@ html{
     }
 
     .contact img{
-        width: 5vw;
+        display: none;
         margin-bottom: 20%;
         border-radius: 5px;
     }
 
     .contact h3{
-        margin-left: 15px;
+        margin-left: 5px;
+        font-weight: 600;
     }
 
     .rrss{
