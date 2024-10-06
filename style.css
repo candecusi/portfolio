@@ -231,6 +231,10 @@ main{
     justify-content: center;
 }
 
+main img{
+    width: 20vw;
+}
+
 .main-content{
     margin-left: 0vw;
 }
