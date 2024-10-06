@@ -233,6 +233,7 @@ main{
 
 main img{
     width: 20vw;
+    display: none;
 }
 
 .main-content{
