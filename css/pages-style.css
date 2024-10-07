@@ -245,7 +245,7 @@ html{
     .container-flex{
         background-color: #DDDDFF;
         padding: 4%;
-        height: 60vh;
+        height: 68vh;
         display: grid; 
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr; 
@@ -568,7 +568,7 @@ html{
 /*PRIMARY BUTTON*/
 
 .btn-primary-phone{
-    display: block;
+    display: none;
 }
 
 .btn-primary-desktop{

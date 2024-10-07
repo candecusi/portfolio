@@ -272,6 +272,10 @@ html{
         font-size: 0.8rem;
     }
 
+    .about ul li{
+        margin-bottom: 10px;
+    }
+
     .about ul li a{
         font-size: 1rem;
     }

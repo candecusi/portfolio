@@ -211,7 +211,7 @@ html{
     .container-flex{
         background-color: #DDDDFF;
         padding: 4%;
-        height: 70vh;
+        height: 38vh;
         display: inline-block; 
         align-items: center;
         margin-bottom: 20px;
@@ -582,6 +582,11 @@ html{
 
 .btn-primary-desktop{
     display: none;
+}
+
+.btn-primary{
+    display: block;
+    text-align: center;
 }
 
 }
