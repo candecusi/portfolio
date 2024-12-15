@@ -99,6 +99,15 @@ html{
 
     /*PRIMARY BUTTON*/
 
+    .btn-primary-menu{
+        background-color: var(--primary);
+        padding: 10px 15px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
     .btn-primary{
         background-color: var(--primary);
         padding: 10px 15px;
@@ -169,6 +178,15 @@ html{
             padding: 20px;
             color: #FEFEFF;
             justify-content: center;
+            margin-bottom: 2px;
+        }
+
+        .btn-primary-menu{
+            background-color: var(--cards);
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: #4D4DCE;
+            margin: 15px 28px;
         }
 
         .hide-menu{
