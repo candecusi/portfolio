@@ -82,7 +82,7 @@ html{
         display: grid; 
         grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
         grid-template-rows: 1fr;    
-        gap: 25px;
+        gap: 15px;
         list-style: none;
         align-items: center;
     }
@@ -130,7 +130,20 @@ html{
 
 /*RESPONSIVE HEADER*/
 
-    @media screen and (max-width:480px) {
+@media screen and (max-width:912px) {
+
+    header{
+            padding: 2vh;
+        }
+
+    .menu{
+        padding-left: 10px;
+    }
+}
+
+
+
+    @media screen and (max-width:540px) {
 
         header{
             padding: 2.5vh;
@@ -254,6 +267,15 @@ html{
 
 
 /*MAIN RESPONSIVE*/
+
+@media screen and (max-width:912px) {
+
+    main img{
+        width: 12.5rem;
+    }
+    
+    }
+    
 
 @media screen and (max-width:480px) {
 
