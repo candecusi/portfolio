@@ -297,7 +297,6 @@ main img{
 }
 
 .main-content h2{
-    font-size: 1rem;
     margin-bottom: 8vh;
 }
 
@@ -493,7 +492,7 @@ main img{
 
     .contact img{
         width: 5vw;
-        margin-bottom: 20%;
+        margin-bottom: 20px;
         border-radius: 5px;
     }
 

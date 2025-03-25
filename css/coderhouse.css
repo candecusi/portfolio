@@ -372,8 +372,17 @@ html{
     .card-pj img{
         width: 24vw;
         border-radius: 15px;
-        border: 6px solid #ffffff;
+        border: 6px solid #e4e4fe;
         margin-bottom: 2vh;
+    }
+
+    .btn-secondary{
+        border: 1.5px solid var(--primary);
+        padding: 10px 15px;
+        border-radius: 8px;
+        color: var(--primary);
+        font-weight: 400;
+        text-decoration: none;
     }
 
 

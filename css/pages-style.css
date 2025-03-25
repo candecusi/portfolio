@@ -600,3 +600,37 @@ html{
 .about-bm span{
     color: #B61A22;
 }
+
+
+/*about INPACK STUDIO*/
+
+.about-inpack-studio{
+    padding: 20px;
+}
+
+.about-inpack-studio h3{
+    padding: 5%;
+    margin: 40px 0px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+}
+
+.about-inpack-studio span{
+    color: #cbbba0;
+}
+
+
+/*about SANTANDER OPEN ACADEMY*/
+
+.about-santander-open-academy{
+    padding: 20px;
+}
+
+.about-santander-open-academy h3{
+    margin-top: 20px;
+}
+
+.about-santander-open-academy span{
+    color: #EC0000;
+}
+
