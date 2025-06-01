@@ -478,7 +478,7 @@ main img{
     /*SKILLS*/
 
     #skills{
-        background-color: var(--primary);
+        /* background-color: var(--primary); */
         padding: 5%;
         background-image: url(../img/subtract-skills-section.png);
         background-size: contain;
@@ -510,7 +510,8 @@ main img{
 
     @media screen and (max-width:1024px){
         #skills{
-            background-color: var(--primary);
+            /* background-color: var(--primary); */
+            background-color: #AAAEEC;
             padding: 5%;
             background-image: url(../img/subtract-skills-section-tablet.png);
             background-size: contain;
@@ -612,12 +613,16 @@ main img{
 
     #certifications{
         padding: 8%;
-        background-color: #E1E8FF;
+        /* background-color: #E1E8FF; */
         justify-content: center;
         background-size: contain;
         background-position: top;
         background-image: url(../img/subtract-certifications-section-mobile.png);
         background-repeat: no-repeat;
+    }
+
+    h2{
+        color: #000;
     }
 
     .cards-certifications{
