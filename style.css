@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-    margin: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+}
+
 :root{
     --primary: #4D4DCE;
-    --bg: #DDDDFF;
+    --bg: #E1E8FF;
     --border-card: #F2F2FD;
     --cards: #FEFEFF;
 }
@@ -69,7 +73,8 @@ html{
 
 
     header{
-        background-color: #F2F2FD;
+        z-index: 1;
+        background-color: #fff;
         padding: 4vh;
         width: 100vw;
         display: flex;  
@@ -130,10 +135,17 @@ html{
 
 /*RESPONSIVE HEADER*/
 
+@media screen and (max-width:1024px){
+    header{
+        padding: 1vh;
+    }
+
+}
+
 @media screen and (max-width:912px) {
 
     header{
-            padding: 2vh;
+            padding: 1vh;
         }
 
     .menu{
@@ -143,7 +155,7 @@ html{
 
 
 
-    @media screen and (max-width:540px) {
+    @media screen and (max-width:712px) {
 
         header{
             padding: 2.5vh;
@@ -219,36 +231,51 @@ html{
 
     main{
         background-color: var(--bg);
-        padding-top: 16%;
-        padding-bottom: 5%;
+        padding: 12% 5% 5% 8%;
         display: flex;  
         justify-content: space-around;
         align-items: center;
     }
 
     main img{
-        width: 80vh;
+        width: 42%;
         border-radius: 10px;
     }
 
-    .main-content{
-        margin-left: 10vw;
+    .logo-svg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5vh;
     }
 
-    .main-content h2{
-        margin-bottom: 4vh;
+    .logo-svg img{
+        width: 20vw;
+        height: 20vw;
+        margin-left: 135%;
+        margin-bottom: 62%;
+        opacity: 0.5;
+        position: relative;
     }
 
 
     /*TEXT*/
 
+
     .title{
         margin-bottom: 5vh;
+    }
+
+    h1{
+        color: var(--primary);
+        font-weight: 600;
+        margin: 6px 0px;
     }
 
     h2{
         font-weight: 500;
         font-size: 2rem;
+        margin: 6px 0px;
     }
 
     h2 a{
@@ -256,8 +283,14 @@ html{
         font-weight: 400;
     }
 
+    p{
+        font-size: 1.2rem;
+    }
+
     span{
         font-size: 1.8rem;
+        color: var(--primary);
+        font-weight: 500;
     }
 
     .btn-primary-phone{
@@ -268,14 +301,47 @@ html{
 
 /*MAIN RESPONSIVE*/
 
-@media screen and (max-width:912px) {
+@media screen and (max-width:1280px){
 
-    main img{
-        width: 12.5rem;
+
+    .logo-svg img{
+        margin-left: 138%;
+        margin-bottom: 83%;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width:900px){
+    main{
+        padding: 20% 6% 8%;
+    }
+
+    h1{
+        font-size: 1.3rem;
     }
     
+
+    .logo-svg{
+        display: none;
     }
-    
+}
+
+@media screen and (max-width:540px){
+    main{
+        padding: 20% 6% 8%;
+    }
+
+    h1, h2{
+        font-size: 1rem;
+    }
+
+}
 
 @media screen and (max-width:480px) {
 
@@ -296,19 +362,21 @@ main img{
     margin-left: 0vw;
 }
 
-.main-content h2{
-    margin-bottom: 8vh;
+.main-content p{
+    margin-bottom: 3vh;
 }
 
 }
-
-
 
 
     /*PROJECTS*/
 
     #projects{
-        padding: 5%;
+        padding: 2% 10%;
+        background-image: url(../img/bg-projects-section.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
     }
 
     .cards-projects{
@@ -326,12 +394,19 @@ main img{
         margin-bottom: 2vh;
     }
 
+    .logo-svg-projects img{
+        width: 10%;
+        margin-left: 100%;
+        top: 0;
+    }
+
 
     /*TEXT*/
 
     h2{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
+
 
     span{
         font-size: 1rem;
@@ -340,11 +415,43 @@ main img{
 
 /*PROJECTS RESPONSIVE*/
 
+@media screen and (max-width:800px){
+
+    #projects{
+        padding: 4% 10% 6% 8%;
+    }
+
+    .cards-projects{
+        gap: 15px;
+    }
+
+    .card-pj h2{
+        margin: 4px 0px;
+    }
+
+    .card-pj img{
+        width: 26vw;
+        border-radius: 15px;
+        border: 6px solid #F2F2FD;
+        margin-bottom: 1vh;
+    }
+
+    a, span{
+        font-size: 0.7rem;
+    }
+
+}
+
+
 @media screen and (max-width:480px) {
 
     #projects{
         padding: 8%;
         justify-content: center;
+        background-image: url(../img/projects-bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
     }
 
     .cards-projects{
@@ -367,8 +474,11 @@ main img{
     /*SKILLS*/
 
     #skills{
-        background-color: var(--bg);
+        background-color: var(--primary);
         padding: 5%;
+        background-image: url(../img/subtract-skills-section.png);
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .skills-cards{
@@ -393,10 +503,39 @@ main img{
   
 
     /*RESPONSIVE SKILLS*/
+
+    @media screen and (max-width:1024px){
+        #skills{
+            background-color: var(--primary);
+            padding: 5%;
+            background-image: url(../img/subtract-skills-section-tablet.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .card-sk{
+            padding: 5vh 5vw;
+            border-radius: 18px;
+        }
+
+        h2 a{
+            font-size: 0.8rem;
+        }
+
+        .card-sk img{
+            width: 40px;
+        }
+    }
+
+
     @media screen and (max-width:480px) {
 
     #skills{
+        background-color: #fff;
         padding: 8%;
+        background-image: url(../img/subtract-skills-section-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .skills-cards{
@@ -404,18 +543,6 @@ main img{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
-
-    .card-sk{
-        background-color: var(--cards);
-        align-items: center;
-        padding: 10vh 12vw;
-        border-radius: 20px;
-    }
-
-    .card-sk img{
-        width: 10vw;
-    }
-  
     }
     
 
@@ -425,6 +552,15 @@ main img{
 
     #certifications{
         padding: 5%;
+        background-color: var(--primary);
+        background-size: contain;
+        background-position: bottom;
+        background-image: url(../img/subtract-certifications-section.png);
+        background-repeat: no-repeat;
+    }
+
+    #certifications h2{
+        color: #fff;
     }
 
     .cards-certifications{
@@ -443,11 +579,41 @@ main img{
 
 
 /*RESPONSIVE CERTIFICACIONES*/
+@media screen and (max-width:800px){
+    #certifications{
+        padding: 4% 10% 6% 6%;
+        background-image: url(../img/subtract-certifications-section-tablet.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .card-cf img{
+        width: 26vw;
+        border: 6px solid #F2F2FD;
+        margin-bottom: 1vh;
+    }
+
+    a{
+        font-size: 0.6rem;
+    }
+
+    h2{
+        margin: 0;
+    }
+}
+
+
+
 @media screen and (max-width:480px) {
 
     #certifications{
         padding: 8%;
+        background-color: #E1E8FF;
         justify-content: center;
+        background-size: contain;
+        background-position: top;
+        background-image: url(../img/subtract-certifications-section-mobile.png);
+        background-repeat: no-repeat;
     }
 
     .cards-certifications{
@@ -460,7 +626,11 @@ main img{
 
     .card-cf img{
         width: 80vw;
-        margin-bottom: 4vh;
+        margin-bottom: 2vh;
+    }
+
+    a, span{
+        font-size: 0.8rem;
     }
   
     }

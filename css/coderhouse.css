@@ -358,7 +358,7 @@ html{
 
     #projects{
         padding: 5%;
-        background-color: #F2F2FD;
+        background-color: #DDDDFF;
     }
 
     .cards-projects{
@@ -427,8 +427,11 @@ html{
     /*TOOLS*/
 
     #tools{
-        background-color: var(--bg);
+        background-color: var(--primary);
         padding: 5%;
+        background-image: url(../img/subtract-skills-section.png);
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .tools-cards{
