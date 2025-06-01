@@ -479,6 +479,7 @@ main img{
 
     #skills{
         /* background-color: var(--primary); */
+        background-color: #AAAEEC;
         padding: 5%;
         background-image: url(../img/subtract-skills-section.png);
         background-size: contain;
@@ -557,7 +558,7 @@ main img{
 
     #certifications{
         padding: 5%;
-        background-color: var(--primary);
+        background-color: #AAAEEC;
         background-size: contain;
         background-position: bottom;
         background-image: url(../img/subtract-certifications-section.png);
@@ -566,6 +567,7 @@ main img{
 
     #certifications h2{
         /* color: #fff; */
+        color: #000;
     }
 
     .cards-certifications{
