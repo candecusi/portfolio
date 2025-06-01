@@ -535,7 +535,7 @@ main img{
     @media screen and (max-width:480px) {
 
     #skills{
-        background-color: #fff;
+        background-color: #AAAEEC;
         padding: 8%;
         background-image: url(../img/subtract-skills-section-mobile.png);
         background-size: cover;
@@ -564,7 +564,7 @@ main img{
     }
 
     #certifications h2{
-        color: #fff;
+        /* color: #fff; */
     }
 
     .cards-certifications{
