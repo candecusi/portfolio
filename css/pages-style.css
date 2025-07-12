@@ -89,6 +89,10 @@ html{
         text-decoration: none;
     }
 
+    .btn-primary-phone{
+        display: none;
+    }
+
     .btn-primary-desktop, .btn-primary-phone{
         background-color: var(--primary);
         padding: 10px 15px;
