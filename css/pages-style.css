@@ -245,7 +245,7 @@ html{
     .container-flex{
         background-color: #DDDDFF;
         padding: 4%;
-        height: 60vh;
+        height: 58vh;
         display: grid; 
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr; 
@@ -339,7 +339,7 @@ html{
         }
 
         a{
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         
@@ -399,7 +399,7 @@ html{
     .card-t{
         background-color: var(--cards);
         align-items: center;
-        padding: 10vh 12vw;
+        padding: 5vh 12vw;
         border-radius: 20px;
     }
 
@@ -474,12 +474,12 @@ html{
     .tools-cards-rel{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     .card-tr{
         align-items: center;
-        padding: 10vh 12vw;
+        padding: 5vh 12vw;
         border-radius: 20px;
     }
 

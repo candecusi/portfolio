@@ -385,7 +385,7 @@ ul{
         }
 
         a{
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         
@@ -509,7 +509,7 @@ ul{
     .card-t{
         background-color: var(--cards);
         align-items: center;
-        padding: 10vh 12vw;
+        padding: 5vh 12vw;
         border-radius: 20px;
     }
 
@@ -560,12 +560,12 @@ ul{
     .tools-cards-rel{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     .card-tr{
         align-items: center;
-        padding: 10vh 12vw;
+        padding: 5vh 12vw;
         border-radius: 20px;
     }
 
