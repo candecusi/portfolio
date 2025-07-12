@@ -242,20 +242,16 @@ html{
         border-radius: 10px;
     }
 
-    main img{
-        width: 350px;
-    }
-
     .logo-svg{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 5vh;
+        margin-bottom: 8vh;
     }
 
     .logo-svg img{
-        width: 20vw;
-        height: 20vw;
+        width: 24vw;
+        height: 24vw;
         margin-left: 135%;
         margin-bottom: 62%;
         opacity: 0.5;
@@ -377,7 +373,6 @@ main img{
 
     #projects{
         padding: 2% 10%;
-        background-image: url(../img/bg-projects-section.jpg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: top;
@@ -413,7 +408,7 @@ main img{
 
 
     span{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
 
@@ -450,9 +445,10 @@ main img{
 @media screen and (max-width:480px) {
 
     #projects{
+        background-image: url(./img/subtract-skills-section-mobile.png);
         padding: 8%;
         justify-content: center;
-        background-image: url(../img/projects-bg.png);
+        background: linear-gradient(#BEC1F2, #fff 100%);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: top;
@@ -478,11 +474,11 @@ main img{
     /*SKILLS*/
 
     #skills{
-        /* background-color: var(--primary); */
-        background-color: #AAAEEC;
+        background-color: var(--primary);
         padding: 5%;
-        background-image: url(../img/subtract-skills-section.png);
+        background-image: url(./img/subtract-skills-section.png);
         background-size: contain;
+        background-position: top;
         background-repeat: no-repeat;
     }
 
@@ -512,9 +508,8 @@ main img{
     @media screen and (max-width:1024px){
         #skills{
             /* background-color: var(--primary); */
-            background-color: #AAAEEC;
+            background-color: #4D4DCE;
             padding: 5%;
-            background-image: url(../img/subtract-skills-section-tablet.png);
             background-size: contain;
             background-repeat: no-repeat;
         }
@@ -536,12 +531,21 @@ main img{
 
     @media screen and (max-width:480px) {
 
+    .title{
+        margin-bottom: 2vh;
+    }
+    
+    .btn-secondary{
+        padding: 5px 10px;
+    }
+
+
     #skills{
-        background-color: #AAAEEC;
         padding: 8%;
-        background-image: url(../img/subtract-skills-section-mobile.png);
+        background: linear-gradient(#fff, #BEC1F2, #4D4DCE 70%);
+        /* background-image: url(../img/subtract-skills-section-mobile.png);
         background-size: cover;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; */
     }
 
     .skills-cards{
@@ -558,16 +562,16 @@ main img{
 
     #certifications{
         padding: 5%;
-        background-color: #AAAEEC;
+        background-color: var(--primary);
         background-size: contain;
         background-position: bottom;
-        background-image: url(../img/subtract-certifications-section.png);
+        background-image: url(./img/subtract-certifications-section.png);
         background-repeat: no-repeat;
     }
 
     #certifications h2{
         /* color: #fff; */
-        color: #000;
+        color: #fff;
     }
 
     .cards-certifications{
@@ -584,14 +588,23 @@ main img{
         margin-bottom: 2vh;
     }
 
+    .card-cf span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
 
 /*RESPONSIVE CERTIFICACIONES*/
 @media screen and (max-width:800px){
     #certifications{
         padding: 4% 10% 6% 6%;
-        background-image: url(../img/subtract-certifications-section-tablet.png);
+        background: linear-gradient(#4D4DCE, #E1E8FF 30%);
+        /* background-image: url(../img/subtract-certifications-section-tablet.png);
         background-size: contain;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; */
     }
 
     .card-cf img{
@@ -615,12 +628,13 @@ main img{
 
     #certifications{
         padding: 8%;
+        background: linear-gradient(#4D4DCE, #E1E8FF 40%);
         /* background-color: #E1E8FF; */
-        justify-content: center;
+        /* justify-content: center;
         background-size: contain;
         background-position: top;
         background-image: url(../img/subtract-certifications-section-mobile.png);
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; */
     }
 
     h2{

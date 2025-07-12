@@ -17,6 +17,11 @@ html{
     scroll-behavior: smooth;
 }
 
+ul{
+    padding: 0;
+}
+
+
 /*HEADER*/
 
 #logo-desktop {
@@ -202,7 +207,21 @@ html{
         font-weight: 400;
     }
 
-    
+    .subjects{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        flex-wrap: wrap;
+    }
+
+    ul li:last-child{
+        margin-bottom: 1.2rem;
+    }
+
+    .disabled {
+        color: #8e8ea7;
+        font-weight: 400;
+    }
 
     /*CODERHOUSE*/
 
@@ -242,10 +261,19 @@ html{
 /*RESPONSIVE MAIN*/
 
 @media screen and (max-width:480px) {
+
+    .content h2{
+        font-size: 1.2rem;
+    }
+
+    .content h3{
+        font-size: 1rem;
+    }
+
     .container-flex{
         background-color: #DDDDFF;
         padding: 4%;
-        height: 20vh;
+        height: 18vh;
         display: grid; 
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr; 
@@ -259,9 +287,6 @@ html{
         margin-bottom: 10px;
     }
 
-    .btn-primary{
-        display: none;
-    }
     
 
     .container-coderhouse img{
@@ -280,13 +305,25 @@ html{
         font-size: 1rem;
     }
 
+     .subjects{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        flex-wrap: wrap;
+    }
+
+    .subjects ul{
+        margin-bottom: 1.5rem;
+    }
+
 }
 
 
     /*ABOUT*/
 
     .about{
-        padding: 20px;
+        padding: 6%;
+        line-height: 1.5;
     }
 
     .about h3{
@@ -358,7 +395,7 @@ html{
 
     #projects{
         padding: 5%;
-        background-color: #DDDDFF;
+        background-color: #F2F2FD;
     }
 
     .cards-projects{
@@ -427,11 +464,11 @@ html{
     /*TOOLS*/
 
     #tools{
-        background-color: var(--primary);
+        background-color: #DDDDFF;
         padding: 5%;
-        background-image: url(../img/subtract-skills-section.png);
+        /* background-image: url(../img/subtract-skills-section.png);
         background-size: contain;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; */
     }
 
     .tools-cards{
@@ -466,7 +503,7 @@ html{
     .tools-cards{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     .card-t{
@@ -569,7 +606,7 @@ html{
 
     .contact img{
         display: none;
-        margin-bottom: 20%;
+        margin-bottom: 6%;
         border-radius: 5px;
     }
 
@@ -622,7 +659,7 @@ html{
 
 
 .contact img{
-    width: 15vw;
+    display: none;
     margin-bottom: 6%;
     border-radius: 5px;
 }
