@@ -1,0 +1,1035 @@
+/* FONT FAMILY */
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: #442F2A;
+}
+
+h1,
+h2,
+.footer-col h3,
+.project a:not(:last-child) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #442F2A;
+}
+
+
+/* NAV DESKTOP */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff7ec80;
+    margin: 20px;
+    padding: 15px 20px;
+    border: 2px solid #442F2A;
+    border-radius: 40px;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+nav .logo {
+    width: 12rem;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+
+.breadcrumbs{
+    text-decoration: underline 1px solid #442F2A;
+    color: #442F2A;
+    padding: 12px;
+}
+
+.nav-links a {
+    text-decoration: underline 1px solid #442F2A;
+    color: #442F2A;
+    font-size: 1rem;
+    padding: 10px 8px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #F5CBD7;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+.menu-open,
+.menu-close {
+    display: none;
+}
+
+
+/* NAV TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        margin: 10px;
+        padding: 10px 20px;
+    }
+
+    nav .logo {
+        width: 10rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* NAV MOBILE */
+@media (max-width: 768px) {
+    nav {
+        margin: 10px 10px 28px 10px;
+        padding: 15px 20px 10px;
+    }
+
+    nav:has(#menu-mobile:target) {
+        margin: 0;
+        top: 0;
+        backdrop-filter: none;
+        border: none;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    .menu-open {
+        display: block;
+        font-size: 2.5rem;
+        color: #442F2A;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #442F2A;
+        z-index: 9999;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 50px;
+        gap: 30px;
+        transition: opacity 0.4s ease;
+    }
+
+    .nav-links:target {
+        height: 100%;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-links li {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-links a {
+        color: #FFF7EC;
+        font-size: 2.5rem;
+        text-align: right;
+        text-decoration: none;
+        padding: 10px 0;
+    }
+
+    .menu-close {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 3rem;
+        color: #FFF7EC;
+        z-index: 10000;
+    }
+}
+
+
+
+/* ==================== BOTÓN ÍNDICE FLOTANTE ==================== */
+.index-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 110px; 
+    z-index: 997;
+}
+
+/* Link invisible de cierre sobre la burbuja */
+.index-close-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    z-index: 998;
+    display: none; /* Oculto por defecto */
+}
+
+/* Lógica: Si el índice está abierto, activamos el link de cierre sobre el botón */
+body:has(#index-popup:target) .index-close-overlay {
+    display: block;
+}
+
+.index-bubble {
+    display: flex;
+    align-items: center;
+    background-color: #442F2A;
+    padding: 10px 25px 10px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    gap: 15px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efecto visual cuando el índice está abierto */
+body:has(#index-popup:target) .index-bubble {
+    background-color: #442F2A;
+    transform: scale(1.05);
+}
+
+.index-number {
+    background-color: #F5CBD7;
+    color: #442F2A;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.index-bubble span {
+    color: #FFF7EC;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: lowercase;
+}
+
+/* POPUP ÍNDICE (Mantener igual al anterior) */
+.index-popup {
+    position: fixed;
+    bottom: 110px;
+    right: 110px;
+    width: 280px;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    z-index: 998;
+    transform: scale(0);
+    transform-origin: bottom center;
+    transition: 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#index-popup:target {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Ajuste responsive para que no se encime con el de contacto */
+@media (max-width: 768px) {
+    .index-wrapper {
+        bottom: 105px; /* Lo subimos para que no tape la burbuja de contacto */
+        right: 30px;
+    }
+    .index-popup {
+        right: 30px;
+        bottom: 180px;
+    }
+}
+
+#index-popup:target {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.index-links {
+    list-style: none;
+}
+
+.index-links li {
+    margin-bottom: 15px;
+}
+
+.index-links a {
+    color: #442F2A;
+    text-decoration: none;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    transition: 0.3s;
+}
+
+.index-links a:hover {
+    color: #F5CBD7;
+    padding-left: 5px;
+}
+
+/* ==================== LAYOUT DE DIAPOSITIVAS ==================== */
+.project-case-study {
+    padding: 0 2%;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.btn-primary {
+    text-decoration: none;
+    background-color: #442F2A;
+    border: 2px solid #442F2A;
+    color: #FFF7EC;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #FFF7EC;
+    color: #442F2A;
+    border-color: #442F2A;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    border: 2px solid #442F2A;
+    color: #442F2A;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #FFF7EC;
+    color: #442F2A;
+    border-color: #442F2A;
+}
+
+.slide-content {
+    flex: 1;
+    text-align: left;
+    width: 95%;
+}
+
+.slide img {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.chip-category {
+    display: table;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background-color: #F5CBD7;
+    border: 2px solid #F5CBD7;
+    color: #442F2A;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Fondo Blur */
+.show-more-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(12px);
+    background-color: radial-gradient(circle, black 20%, rgba(0, 0, 0, 0) 80%);
+}
+
+/* Botón flotante central */
+.btn-show-more {
+    background-color: #442F2A;
+    color: #FFF7EC;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 700;
+    border: 2px solid #442F2A;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.btn-show-more:hover {
+    background-color: #FFF7EC;
+    color: #442F2A;
+}
+
+
+/* RESPONSIVE Fondo Blur */
+@media (max-width: 768px) {
+    .slide {
+        padding: 30px 0;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .slide img {
+        max-width: 100%;
+    }
+
+    .index-wrapper {
+        bottom: 18px;
+        right: 60vw;
+    }
+
+    /* Se apila sobre el de contacto */
+    .index-popup {
+        right: 20px;
+        bottom: 100px;
+        width: 90vw;
+    }
+
+
+    .show-more-overlay {
+        mask-image: linear-gradient(circle, black 10%, rgba(0, 0, 0, 0) 70%);
+        -webkit-mask-image: linear-gradient(circle, black 10%, rgba(0, 0, 0, 0) 70%);
+    }
+}
+
+@media (max-width: 376px) {
+    .index-wrapper {
+        bottom: 18px;
+        right: 56vw;
+    }
+}
+
+/* Estilos para la sección de mockups dobles */
+.mockup-container {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    max-width: 60%; /* Ajuste para que no rompa el slide */
+}
+
+.mockup-img {
+    width: 50%;
+    height: fit-content;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+/* Ajuste responsive para mockups */
+@media (max-width: 768px) {
+    .mockup-container {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .mockup-img {
+        width: 100%;
+    }
+}
+
+
+
+/* POPUP CONTACTO */
+
+.bubble-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 997;
+}
+
+
+.bubble-close-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    z-index: 998;
+    display: none;
+}
+
+body:has(#contact-popup:target) .bubble-close-overlay {
+    display: block;
+}
+
+.contact-bubble {
+    display: flex;
+    width: 65px;
+    height: 65px;
+    background-color: #442F2A;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+
+.bubble-icon-img {
+    width: 2.5rem;
+    height: auto;
+}
+
+.contact-bubble:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+body:has(#contact-popup:target) .contact-bubble {
+    transform: scale(1);
+    background-color: #442F2A;
+}
+
+.contact-popup {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 300px;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    z-index: 996;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+#contact-popup:target {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    color: #442F2A;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.popup-close:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+
+.popup-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-mini {
+    background-color: #442F2A;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.popup-logo h2 {
+    font-size: 1.1rem;
+    color: #442F2A;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+
+.popup-divider {
+    height: 1px;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+}
+
+
+.popup-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-contacts li {
+    margin-bottom: 15px;
+}
+
+.popup-contacts a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #442F2A;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.popup-contacts a i {
+    font-size: 1.3rem;
+}
+
+.popup-contacts a:hover {
+    color: #F5CBD7;
+    transform: translateX(5px);
+}
+
+/* POPUP TABLET */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .contact-bubble,
+    .bubble-close-overlay {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-popup {
+        width: 280px;
+    }
+
+
+}
+
+/* POPUP MOBILE */
+
+@media (max-width: 768px) {
+    .bubble-wrapper {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .contact-bubble,
+    .bubble-close-overlay {
+        width: 55px;
+        height: 55px;
+    }
+
+    .bubble-icon-img {
+        width: 1.8rem;
+    }
+
+    .contact-popup {
+        width: 85vw;
+        right: 20px;
+        bottom: 105px;
+        padding: 20px;
+    }
+}
+
+/* ==================== MODAL REPORTE UX (AJUSTE PPT) ==================== */
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.modal-container:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-overlay-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    z-index: -1;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1100px; /* Ancho máximo para no perder calidad */
+    background: #000; /* Fondo negro solo por si la carga tarda */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    transform: scale(0.8);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-container:target .modal-content {
+    transform: scale(1);
+}
+
+/* CONTENEDOR QUE FUERZA EL 16:9 */
+.aspect-ratio-container {
+    position: relative;
+    width: 100%;
+    /* Esta línea es la magia: mantiene el ancho exacto de la PPT */
+    aspect-ratio: 18 / 8; 
+}
+
+.aspect-ratio-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Botón Cerrar (Estilo minimalista sobre la PPT) */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: white; /* Blanco para que resalte sobre el borde de la PPT */
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+    padding: 5px 5px 2px;
+}
+
+.modal-close:hover {
+    background-color: #442F2A;
+    color: #F5CBD7;
+    transform: scale(1.2);
+    border-radius: 12px;
+}
+
+/* Ajustes para Mobile */
+@media (max-width: 768px) {
+    .aspect-ratio-container {
+    aspect-ratio: 16 / 8; 
+}
+
+    .modal-content {
+        width: 95%;
+        /* En mobile mantenemos la proporción pero permitimos que sea más pequeño */
+    }
+    
+    .modal-close {
+        top: 5px;
+        right: 10px;
+        font-size: 1.8rem;
+    }
+}
+
+/* SKILLS DESKTOP */
+#skills {
+    text-align: center;
+    margin: 2% 2% 1%;
+    padding: 5% 0%;
+    background: linear-gradient(190deg, rgba(255, 247, 236, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 20px;
+}
+
+.skills {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 50px auto;
+    flex-wrap: wrap;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 200px;
+}
+
+.skill img {
+    width: 100%;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.skill a {
+    text-decoration: underline 2px solid #442F2A;
+    color: #442F2A;
+    transition: 0.3s;
+    display: table;
+}
+
+.skill a:not(:has(img)):hover {
+    opacity: 0.7;
+}
+
+.skill a:has(img) {
+    border-bottom: none;
+    transition: 0.3s;
+}
+
+.skill a:has(img):hover {
+    transform: scale(1.05);
+}
+
+
+/* SKILLS TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skills {
+        gap: 3%;
+    }
+
+    .skill img {
+        width: 8rem;
+    }
+}
+
+
+/* SKILLS MOBILE */
+@media (max-width: 768px) {
+    #skills {
+        margin: 8% 1% 5% 2.5%;
+        padding: 10% 5% 0%;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 20px;
+    }
+
+    .skill {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .skill img {
+        width: 8rem;
+    }
+
+    .skill a {
+        font-size: 0.95rem;
+        line-height: 1.2;
+    }
+
+    .skill a:has(img):hover {
+        transform: scale(1.03);
+    }
+}
+
+
+/* FOOTER DESKTOP */
+footer {
+    position: relative;
+    padding: 5%;
+    margin-top: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.social-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #FFF7EC;
+    color: #442F2A;
+    padding: 8px 20px 8px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.social-item span {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1.5px;
+    display: inline-block;
+}
+
+.social-item i {
+    margin-right: 8px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.social-item:hover {
+    background-color: #F5CBD7;
+    transform: translateX(8px);
+}
+
+.footer-links a {
+    display: table;
+    color: #442F2A;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1.5px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 0.6;
+}
+
+.footer-heart-left,
+.footer-heart-right {
+    position: absolute;
+    z-index: 1;
+}
+
+.footer-heart-left {
+    left: -5%;
+    bottom: 10%;
+    width: 250px;
+    filter: blur(5px);
+    opacity: 0.6;
+}
+
+.footer-heart-right {
+    right: -5%;
+    top: 10%;
+    width: 300px;
+    filter: blur(8px);
+    opacity: 0.5;
+}
+
+
+/* FOOTER TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-container {
+        gap: 20px;
+    }
+
+    .footer-logo {
+        width: 140px;
+    }
+
+    .social-item {
+        font-size: 1rem;
+        padding: 6px 15px;
+    }
+}
+
+
+/* FOOTER MOBILE */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-logo {
+        width: 150px;
+    }
+
+    .social-item {
+        font-size: 0.95rem;
+        padding: 8px 15px;
+    }
+
+    .footer-heart-left,
+    .footer-heart-right {
+        width: 150px;
+        opacity: 0.4;
+    }
+
+    .social-item span,
+    .footer-links a {
+        text-underline-offset: 3px;
+    }
+}
