@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://candecusi.github.io/portfolio/sitemap.xml

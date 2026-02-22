@@ -383,7 +383,7 @@ main {
 
     .btn-primary,
     .btn-secondary {
-        padding: 12px 30px;
+        padding: 10px 30px;
         font-size: 1.4rem;
         border-radius: 12px;
         white-space: nowrap;
@@ -449,7 +449,7 @@ main {
 
     .btn-primary,
     .btn-secondary {
-        padding: 12px;
+        padding: 10px;
         font-size: 1.3rem;
     }
 }
