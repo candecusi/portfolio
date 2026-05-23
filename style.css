@@ -182,7 +182,7 @@ main {
     border-radius: 20px;
     text-align: center;
     position: relative;
-    width: clamp(320px, 95%, 1200px);
+    width: clamp(320px, 95%, 95%);
 }
 
 .left-heart,
