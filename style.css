@@ -761,7 +761,7 @@ body:has(#contact-popup:target) .contact-bubble {
 /* PROJECTS DESKTOP */
 #projects {
     text-align: center;
-    width: clamp(320px, 95%, 1200px);
+    width: clamp(320px, 95%, 95%);
     margin: 0 auto;
 }
 
