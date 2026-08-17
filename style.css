@@ -345,13 +345,12 @@ main {
 @media (max-width: 768px) {
     main {
         margin: 6% auto 2%;
-
+        background: none;
         padding: 60% 5% 15%;
         border-radius: 25px;
         overflow: hidden;
         background-color: #FFF7EC;
         background-image: url('img/noise-bg-mobile.png'), linear-gradient(145deg, rgba(255, 247, 236, 1) 0%, rgba(245, 203, 215, 1) 59%);
-
         padding: 6% 5% 6%;
         border-radius: 25px;
         overflow: hidden;
