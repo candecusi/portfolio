@@ -828,11 +828,8 @@ body:has(#contact-popup:target) .contact-bubble {
 }
 
 
-#chip-ux,
-
 #chip-experience,
 #filter-experience:target~.chips #chip-experience,
-
 #filter-ux:target~.chips #chip-ux,
 #filter-dev:target~.chips #chip-dev,
 #filter-brand:target~.chips #chip-brand,
