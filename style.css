@@ -14,10 +14,23 @@ html {
 }
 
 body {
+<<<<<<< HEAD
     overflow-x: hidden;
     width: 100%;
     font-family: "Atkinson Hyperlegible", sans-serif;
     color: #442F2A;
+=======
+    width: 100%;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: #442F2A;
+    overflow: visible;
+}
+
+.page-wrapper{
+    overflow-x: hidden;
+    overflow-y: visible;
+    min-height: 100vh; 
+>>>>>>> 962ce3d (experience)
 }
 
 h1,
@@ -175,7 +188,11 @@ nav .nav-links {
 /* MAIN DESKTOP */
 main {
     margin: 2% auto 1%;
+<<<<<<< HEAD
     padding: 10% 0%;
+=======
+    padding: 5% 0%;
+>>>>>>> 962ce3d (experience)
     background-color: #F5CBD7;
     background-image: url('img/noise-bg.png'), linear-gradient(145deg, rgba(255, 247, 236, 1) 0%, rgba(245, 203, 215, 1) 59%);
     background-size: cover;
@@ -239,7 +256,11 @@ main {
 
 .hero h1 {
     font-size: clamp(2rem, 5vw, 3rem);
+<<<<<<< HEAD
     margin-bottom: 20px;
+=======
+    margin-bottom: 32px;
+>>>>>>> 962ce3d (experience)
 }
 
 .hero p {
@@ -284,7 +305,11 @@ main {
 /* MAIN TABLET */
 @media (min-width: 769px) and (max-width: 1024px) {
     main {
+<<<<<<< HEAD
         padding: 15% 5%;
+=======
+        padding: 8% 5%;
+>>>>>>> 962ce3d (experience)
     }
 
     .hero h1 {
@@ -321,11 +346,19 @@ main {
 @media (max-width: 768px) {
     main {
         margin: 6% auto 2%;
+<<<<<<< HEAD
         padding: 60% 5% 15%;
         border-radius: 25px;
         overflow: hidden;
         background-color: #FFF7EC;
         background-image: url('img/noise-bg-mobile.png'), linear-gradient(145deg, rgba(255, 247, 236, 1) 0%, rgba(245, 203, 215, 1) 59%);
+=======
+        padding: 6% 5% 6%;
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: #FFF7EC;
+        /* background-image: url('img/noise-bg-mobile.png'), linear-gradient(145deg, rgba(255, 247, 236, 1) 0%, rgba(245, 203, 215, 1) 59%); */
+>>>>>>> 962ce3d (experience)
         background-size: cover;
     }
 
@@ -456,14 +489,22 @@ main {
 
 @media (max-width: 390px) {
     main {
+<<<<<<< HEAD
         padding: 60% 2% 12%;
+=======
+        padding: 6% 2% 12%;
+>>>>>>> 962ce3d (experience)
     }
 }
 
 @media (max-width: 376px) {
     main {
         margin: 8% auto 10%;
+<<<<<<< HEAD
         padding: 60% 0% 10%;
+=======
+        padding: 6% 2% 10%;
+>>>>>>> 962ce3d (experience)
     }
 
     .hero h1 {
@@ -793,7 +834,12 @@ body:has(#contact-popup:target) .contact-bubble {
     color: #442F2A;
 }
 
+<<<<<<< HEAD
 #chip-ux,
+=======
+#chip-experience,
+#filter-experience:target~.chips #chip-experience,
+>>>>>>> 962ce3d (experience)
 #filter-ux:target~.chips #chip-ux,
 #filter-dev:target~.chips #chip-dev,
 #filter-brand:target~.chips #chip-brand,
@@ -802,6 +848,7 @@ body:has(#contact-popup:target) .contact-bubble {
     background-color: #F5CBD7;
 }
 
+<<<<<<< HEAD
 #filter-dev:target~.chips #chip-ux,
 #filter-brand:target~.chips #chip-ux,
 #filter-davinci:target~.chips #chip-ux,
@@ -810,6 +857,19 @@ body:has(#contact-popup:target) .contact-bubble {
 }
 
 #projects:not(:has(.filter-anchor:target)) .project:not(.ux),
+=======
+#filter-experience:target ~ .chips .chip,
+#filter-ux:target ~ .chips .chip,
+#filter-dev:target ~ .chips .chip,
+#filter-brand:target ~ .chips .chip,
+#filter-davinci:target ~ .chips .chip,
+#filter-coderhouse:target ~ .chips .chip {
+    background-color: transparent;
+}
+
+#projects:not(:has(.filter-anchor:target)) .project:not(.experience),
+#filter-experience:target~.projects .project:not(.experience),
+>>>>>>> 962ce3d (experience)
 #filter-ux:target~.projects .project:not(.ux),
 #filter-dev:target~.projects .project:not(.dev),
 #filter-brand:target~.projects .project:not(.brand),
@@ -822,7 +882,11 @@ body:has(#contact-popup:target) .contact-bubble {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: clamp(15px, 3vw, 30px);
+<<<<<<< HEAD
     max-width: 78rem;
+=======
+    max-width: 100%;
+>>>>>>> 962ce3d (experience)
     margin: 0 auto;
 }
 
@@ -831,8 +895,12 @@ body:has(#contact-popup:target) .contact-bubble {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+<<<<<<< HEAD
     max-width: 38.2rem;
     padding: 15px;
+=======
+    max-width: 100%;
+>>>>>>> 962ce3d (experience)
     transition: 0.3s;
     gap: 12px;
 }
@@ -926,11 +994,19 @@ body:has(#contact-popup:target) .contact-bubble {
 /* SKILLS DESKTOP */
 #skills {
     text-align: center;
+<<<<<<< HEAD
     margin: 2% auto;
     padding: 5% 0%;
     background: linear-gradient(190deg, rgba(255, 247, 236, 1) 0%, rgba(0, 0, 0, 0) 100%);
     border-radius: 20px;
     width: clamp(320px, 95%, 1200px);
+=======
+    margin: 5% auto;
+    padding: 5% 0%;
+    background: linear-gradient(190deg, rgba(255, 247, 236, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 20px;
+    width: clamp(320px, 95%, 2800px);
+>>>>>>> 962ce3d (experience)
 }
 
 .skills {
@@ -978,7 +1054,11 @@ body:has(#contact-popup:target) .contact-bubble {
 /* SKILLS TABLET */
 @media (min-width: 769px) and (max-width: 1024px) {
     .skills {
+<<<<<<< HEAD
         gap: 3%;
+=======
+        gap: 1%;
+>>>>>>> 962ce3d (experience)
     }
 
     .skill img {
@@ -989,7 +1069,10 @@ body:has(#contact-popup:target) .contact-bubble {
 /* SKILLS MOBILE */
 @media (max-width: 768px) {
     #skills {
+<<<<<<< HEAD
         margin: 8% 1% 5% 3.5%;
+=======
+>>>>>>> 962ce3d (experience)
         padding: 10% 5% 0%;
     }
 
