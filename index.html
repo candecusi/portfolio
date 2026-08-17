@@ -47,7 +47,7 @@
     })(window, document, "clarity", "script", "u4k1sy3jbs");
 </script>
 </head>
-<body id="body">
+<body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZQNCK8W"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -73,21 +73,6 @@
     </ul>
 </nav>
 
-    <main id="main-hero">
-        <img src="img/white-blur-heart.png" alt="Corazón decorativo" class="left-heart">
-        <img src="img/white-blur-heart.png" alt="Corazón decorativo" class="right-heart">
-
-        <a href="#filter-dev" class="hero-filter-link">
-            <img src="img/projects/digitools-website.jpg" alt="Desarrollo web" class="web-dev-img">
-        </a>
-        <a href="#filter-ux" class="hero-filter-link">
-            <img src="img/projects/paris-homepage.jpg" alt="Diseño UX/UI" class="ux-ui-img">
-        </a>
-
-        <div class="hero">
-            <h1>Candela Cusinier</h1>
-            <p>Diseño UX/UI & Desarrollo web</p>
-
 <div class="page-wrapper">
 
     <main id="main-hero">
@@ -104,7 +89,6 @@
         <div class="hero">
             <h1>Candela Cusinier</h1>
             <p>Diseñadora UX/UI • Desarolladora web • Analista Ecommerce </p>
-
             <div class="btn-group">
                 <a href="#projects" class="btn-primary">Ver proyectos</a>
                 <a href="#skills" class="btn-secondary">Ver habilidades</a>
@@ -142,8 +126,6 @@
     <section id="projects">
         <h2>Proyectos</h2>
 
-
-
         <div id="filter-experience" class="filter-anchor"></div>
         <div id="filter-ux" class="filter-anchor"></div>
         <div id="filter-dev" class="filter-anchor"></div>
@@ -153,25 +135,16 @@
 
         <div class="chips">
             <div class="projects-chips">
-
-                <a href="#filter-ux" class="chip" id="chip-ux">UX/UI</a>
-                <a href="#filter-dev" class="chip" id="chip-dev">Desarrollo web</a>
-                <a href="#filter-brand" class="chip" id="chip-brand">Branding</a>
-                <a href="#filter-davinci" class="chip" id="chip-davinci">Da Vinci</a>
-
                 <a href="#filter-experience" class="chip" id="chip-experience">Proyectos laborales</a>
                 <a href="#filter-ux" class="chip" id="chip-ux">UX/UI</a>
                 <a href="#filter-dev" class="chip" id="chip-dev">Desarrollo web</a>
                 <a href="#filter-davinci" class="chip" id="chip-davinci">Da Vinci</a>
                 <a href="#filter-brand" class="chip" id="chip-brand">Branding</a>    
-
                 <a href="#filter-coderhouse" class="chip" id="chip-coderhouse">Coderhouse</a>
             </div>
         </div>
 
         <div class="projects">
-
-
             <div class="project ux dev experience">
                 <a href="https://www.linkedin.com/in/candela-cusinier/" target="_blank"> <img src="img/projects/awada-market.jpg" alt="Landing"></a>
                 <a href="https://www.linkedin.com/in/candela-cusinier/" target="_blank">Landing ↗</a>
@@ -216,7 +189,6 @@
                 <a href="https://www.linkedin.com/in/candela-cusinier/" target="_blank"> <img src="img/projects/cq-winter-26.jpg" alt="Landing"></a>
                 <a href="https://www.linkedin.com/in/candela-cusinier/" target="_blank">Landing ↗</a>
             </div>
-
 
             <div class="project ux brand davinci">
                 <a href="pages/rindup.html"> <img src="img/projects/rindup-app.svg" alt="RindUP App"></a>
@@ -339,12 +311,13 @@
             </div>
         </div>
     </footer>
+</div>
 
     <script>
-        const projectsSection = document.getElementById('body');
+        const projectsSection = document.getElementById('projects');
         if (projectsSection) {
             projectsSection.addEventListener('contextmenu', (e) => {
-                e.preventDefault(); 
+                e.preventDefault();  // Cancela el menú contextual
             });
         }
 
@@ -388,5 +361,6 @@
             });
         });
     </script>
+
 </body>
 </html>
