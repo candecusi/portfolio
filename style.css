@@ -489,22 +489,16 @@ main {
 
 @media (max-width: 390px) {
     main {
-<<<<<<< HEAD
         padding: 60% 2% 12%;
-=======
         padding: 6% 2% 12%;
->>>>>>> 962ce3d (experience)
     }
 }
 
 @media (max-width: 376px) {
     main {
         margin: 8% auto 10%;
-<<<<<<< HEAD
         padding: 60% 0% 10%;
-=======
         padding: 6% 2% 10%;
->>>>>>> 962ce3d (experience)
     }
 
     .hero h1 {
@@ -513,6 +507,7 @@ main {
 
     .hero p {
         margin-bottom: 10px;
+        font-size: 18px;
     }
 
     .left-heart {
