@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <title>Cande Cusi - Redirigiendo...</title>
     <script>
-        // Mapeo rápido de códigos cortos a campañas reales
         const destinos = {
             "c1": "https://candecusi.github.io/portfolio/?utm_source=postulacion&utm_medium=email&utm_campaign=de-la-ostia",
             "c2": "https://candecusi.github.io/portfolio/?utm_source=postulacion&utm_medium=email&utm_campaign=ted-bodin",
             "c3": "https://candecusi.github.io/portfolio/?utm_source=postulacion&utm_medium=email&utm_campaign=modo",
-            "c3": "https://candecusi.github.io/portfolio/?utm_source=postulacion&utm_medium=email&utm_campaign=galicia"
+            "c4": "https://candecusi.github.io/portfolio/?utm_source=postulacion&utm_medium=email&utm_campaign=galicia"
         };
 
-        // Leer el parámetro 'ref' de la URL (ej: ?ref=m1)
         const params = new URLSearchParams(window.location.search);
         const ref = params.get("ref");
 
-        // URL base de tu portfolio
-        const baseUrl = "https://candecusi.github.io/portfolio/?";
-
-        // Si el código existe, redirige con sus UTMs; si no, va al portfolio limpio
+        // Redirección directa según el mapa
         if (ref && destinos[ref]) {
-            window.location.replace(baseUrl + destinos[ref]);
+            window.location.replace(destinos[ref]);
         } else {
             window.location.replace("https://candecusi.github.io/portfolio/");
         }
