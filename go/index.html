@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cande Cusi - Redirigiendo...</title>
+    <script>
+        const destinos = {
+            "c1": "https://candecusi.github.io/portfolio/?utm_source=postulacion&utm_medium=email&utm_campaign=de-la-ostia",
+            "c2": "https://candecusi.github.io/portfolio/?utm_source=postulacion&utm_medium=email&utm_campaign=ted-bodin",
+            "c3": "https://candecusi.github.io/portfolio/?utm_source=postulacion&utm_medium=email&utm_campaign=modo",
+            "c4": "https://candecusi.github.io/portfolio/?utm_source=postulacion&utm_medium=email&utm_campaign=galicia"
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const ref = params.get("ref");
+
+        // Redirección directa según el mapa
+        if (ref && destinos[ref]) {
+            window.location.replace(destinos[ref]);
+        } else {
+            window.location.replace("https://candecusi.github.io/portfolio/");
+        }
+    </script>
+</head>
+<body>
+    <p>Redirigiendo a portfolio profesional...</p>
+</body>
+</html>
